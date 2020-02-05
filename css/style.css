@@ -46,7 +46,9 @@ nav a:hover{
   z-index: 1;
 
   /*Your code here - position relative to the parent */
-  /*Your code here - place 40px higher */;
+  position: absolute;
+  /*Your code here - place 40px higher */
+  
 }
 
 /*Your code here*/
@@ -75,7 +77,8 @@ nav{
 
   /*Your code here*/
   /*Span the top row*/
-
+  grid-column: 1/-1;
+  grid-row: 1/span 1;
 }
 
 header{
@@ -88,7 +91,10 @@ header{
 
   /* Your code here */
   /* Set background-image to header.jpg in the images folder */
+  background-image: url("../images/header.jpg");
   /* Span one row */
+  grid-row: 2/span 1;
+  grid-column: 1/-1;
 }
 
 header p{
@@ -96,46 +102,46 @@ header p{
   font-size: 24px;
   padding: 0 100px;
   text-align: center;
+  overflow: hidden;
 }
 
 
 .container{
   /*Your code here  */
   /* See documentation for mobile view */
+  display: grid;
+  align-items: center;
+  grid-template-columns: 100px 400px 100px;
+  grid-template-rows: 30px auto auto auto auto auto 100px;
+  grid-row-gap: 15px;
+  width: 95vw;
+  overflow: hidden;
 
 }
 .about, .method, .clients, .contact{
   /*Your code here */
   /* See documentation for mobile view */
-
+  grid-column: 2/span 1;
 }
 
 .about-image, .method-image, .clients-image, .contact-image{
    /*Your code here */
    /* See documentation for mobile view */
+  grid-column: 1/-1;
+  max-height: 700px;
+  overflow: hidden;
 }
-
 .about, .about-image{
-  /*Your code here */
-  /* See documentation for mobile view */
-
+  grid-row: 3/span 1;
 }
-
 .method, .method-image{
-  /*Your code here */
-  /* See documentation for mobile view */
+  grid-row: 4/span 1;
 }
-
-
 .clients, .clients-image{
-  /*Your code here */
-  /* See documentation for mobile view */
+  grid-row: 5/span 1;
 }
-
-
 .contact, .contact-image{
-  /*Your code here */
-  /* See documentation for mobile view */
+  grid-row: 6/span 1;
 }
 
 .text-block{
@@ -144,6 +150,7 @@ header p{
   padding: 30px;
   /*Your code here:*/
   /*Align the content in the center */
+  text-align: center;
 
 }
 
@@ -154,6 +161,9 @@ header p{
   .container{
   /*Your code here */
   /* See documentation for desktop view */ 
+    display: grid;
+    grid-template-columns: 0px auto 500px auto 50px;
+    grid-template-rows: 0px 400px 400px 400px 400px 400px 100px;
   }
 
   nav{
@@ -166,11 +176,14 @@ header p{
   .about, .clients, .method-image, .contact-image{
   /*Your code here */
   /* See documentation for desktop view */ 
+    grid-column: 3/span 2;
   }
 
   .about-image, .clients-image, .method, .contact{
     /*Your code here */
     /* See documentation for desktop view */ 
+      grid-column: 2/span 2;
+      overflow: hidden;
     }
 
 
