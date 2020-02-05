@@ -3,7 +3,7 @@ html{
 }
 
 body{
-  background-color: #ddd;
+  background-color: #595959;
   font-size: 18px;
   margin: 0;
   padding: 0;
@@ -110,7 +110,6 @@ header p{
   font-size: 24px;
   padding: 0 100px;
   text-align: center;
-  overflow: hidden;
 }
 
 
@@ -192,26 +191,6 @@ header p{
     /* See documentation for desktop view */ 
       grid-column: 2/span 2;
     }
-
-  /* img{
-    overflow: hidden;    
-  }
-  .about, .about-image{
-    grid-row: 3/span 1;
-    overflow: hidden;
-  }
-  .method, .method-image{
-    grid-row: 4/span 1;
-    overflow: hidden;
-  }
-  .clients, .clients-image{
-    grid-row: 5/span 1;
-    overflow: hidden;
-  }
-  .contact, .contact-image{
-    grid-row: 6/span 1;
-    overflow: hidden;
-  } */
 
 }  /*End the media query*/
 
